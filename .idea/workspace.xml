@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33b1392b-b57e-4d8e-b39e-5a68adc8306b" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/HurricanesStudent2015_v11/HurricaneOrganizerArrayName.java" afterPath="$PROJECT_DIR$/HurricanesStudent2015_v11/HurricaneOrganizerArrayName.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,14 +15,49 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Hurricane.class" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Hurricane.class" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HurricanesStudent2015_v11/Hurricane.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+            <state relative-caret-position="1675">
+              <caret line="67" column="5" lean-forward="false" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
               <folding>
-                <element signature="e#0#1146#0" expanded="true" />
+                <marker date="1519238075983" expanded="true" signature="0:104" ph="/.../" />
+                <marker date="1519238075983" expanded="false" signature="2143:2149" ph=" }" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HurricaneOrganizerArrayName.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/HurricanesStudent2015_v11/HurricaneOrganizerArrayName.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="197" column="11" lean-forward="false" selection-start-line="197" selection-start-column="11" selection-end-line="197" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#10028#10029#0" expanded="true" />
+                <element signature="e#10071#10072#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Hurricane.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HurricanesStudent2015_v11/Hurricane.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-75">
+              <caret line="27" column="43" lean-forward="false" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hurricanedata.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HurricanesStudent2015_v11/hurricanedata.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="38" column="26" lean-forward="true" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -33,6 +70,13 @@
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
       <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/HurricanesStudent2015_v11/HurricaneOrganizerArrayName.java" />
+      </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -203,12 +247,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1519236877818</updated>
-      <workItem from="1519236879763" duration="149000" />
+      <workItem from="1519236879763" duration="1202000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149000" />
+    <option name="totallyTimeSpent" value="1202000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -256,10 +300,89 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/HurricanesStudent2015_v11/Hurricane.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        <state relative-caret-position="1675">
+          <caret line="67" column="5" lean-forward="false" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
           <folding>
-            <element signature="e#0#1146#0" expanded="true" />
+            <marker date="1519238075983" expanded="true" signature="0:104" ph="/.../" />
+            <marker date="1519238075983" expanded="false" signature="2143:2149" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HurricanesStudent2015_v11/HurricaneOrganizerArrayName.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1519238075997" expanded="true" signature="0:104" ph="/.../" />
+            <marker date="1519238075997" expanded="false" signature="113:180" ph="..." />
+            <marker date="1519238075997" expanded="true" signature="337:377" ph="{...}" />
+            <marker date="1519238075997" expanded="true" signature="458:700" ph="{...}" />
+            <marker date="1519238075997" expanded="true" signature="763:1633" ph="{...}" />
+            <marker date="1519238075997" expanded="false" signature="1668:1679" ph=" { " />
+            <marker date="1519238075997" expanded="false" signature="1688:1694" ph=" }" />
+            <marker date="1519238075997" expanded="false" signature="1728:1739" ph=" { " />
+            <marker date="1519238075997" expanded="false" signature="1748:1754" ph=" }" />
+            <marker date="1519238075997" expanded="false" signature="1789:1800" ph=" { " />
+            <marker date="1519238075997" expanded="false" signature="1809:1815" ph=" }" />
+            <marker date="1519238075997" expanded="false" signature="1849:1860" ph=" { " />
+            <marker date="1519238075997" expanded="false" signature="1869:1875" ph=" }" />
+            <marker date="1519238075997" expanded="false" signature="1922:1933" ph=" { " />
+            <marker date="1519238075997" expanded="false" signature="1945:1951" ph=" }" />
+            <marker date="1519238075997" expanded="false" signature="1997:2008" ph=" { " />
+            <marker date="1519238075997" expanded="false" signature="2020:2026" ph=" }" />
+            <marker date="1519238075997" expanded="false" signature="2072:2083" ph=" { " />
+            <marker date="1519238075997" expanded="false" signature="2095:2101" ph=" }" />
+            <marker date="1519238075997" expanded="true" signature="2131:2138" ph="{}" />
+            <marker date="1519238075997" expanded="true" signature="2168:2175" ph="{}" />
+            <marker date="1519238075997" expanded="true" signature="2210:2217" ph="{}" />
+            <marker date="1519238075997" expanded="true" signature="2251:2258" ph="{}" />
+            <marker date="1519238075997" expanded="true" signature="2317:2324" ph="{}" />
+            <marker date="1519238075997" expanded="true" signature="2376:2383" ph="{}" />
+            <marker date="1519238075997" expanded="true" signature="2456:2463" ph="{}" />
+            <marker date="1519238075997" expanded="true" signature="2509:2607" ph="{...}" />
+            <marker date="1519238075997" expanded="true" signature="2665:2782" ph="{...}" />
+            <marker date="1519238075997" expanded="false" signature="2865:2876" ph=" { " />
+            <marker date="1519238075997" expanded="false" signature="2888:2894" ph=" }" />
+            <marker date="1519238075997" expanded="false" signature="2964:2975" ph=" { " />
+            <marker date="1519238075997" expanded="false" signature="2987:2993" ph=" }" />
+            <marker date="1519238075997" expanded="true" signature="3025:3185" ph="{...}" />
+            <marker date="1519238075997" expanded="false" signature="3220:3231" ph=" { " />
+            <marker date="1519238075997" expanded="false" signature="3269:3275" ph=" }" />
+            <marker date="1519238075997" expanded="true" signature="3327:3709" ph="{...}" />
+            <marker date="1519238075997" expanded="true" signature="3739:4232" ph="{...}" />
+            <marker date="1519238075997" expanded="true" signature="4267:4568" ph="{...}" />
+            <marker date="1519238075997" expanded="true" signature="4602:4897" ph="{...}" />
+            <marker date="1519238075997" expanded="true" signature="4937:6362" ph="{...}" />
+            <marker date="1519238075997" expanded="true" signature="6426:6655" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HurricanesStudent2015_v11/hurricanedata.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="38" column="26" lean-forward="true" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HurricanesStudent2015_v11/Hurricane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-75">
+          <caret line="27" column="43" lean-forward="false" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HurricanesStudent2015_v11/HurricaneOrganizerArrayName.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="197" column="11" lean-forward="false" selection-start-line="197" selection-start-column="11" selection-end-line="197" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#10028#10029#0" expanded="true" />
+            <element signature="e#10071#10072#0" expanded="true" />
           </folding>
         </state>
       </provider>

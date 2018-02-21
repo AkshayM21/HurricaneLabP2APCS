@@ -72,66 +72,100 @@ public class HurricaneOrganizerArrayName
     }
 
     /**
-     * Comment this method.
+     * Finds the maximum wind speed of the hurricanes
+     * @return the maximium wind speed
      */
-    public int findMaxWindSpeed( )
+    public int findMaxWindSpeed()
     {
         // replace the following line
-        return 0;
+        int max = hurricanes[0].getSpeed();
+        for(int i=1; i<hurricanes.length; i++){
+            if(hurricanes[i].getSpeed()>max) max = hurricanes[i].getSpeed();
+        }
+        return max;
     }
 
     /**
-     * Comment this method.
+     * Finds the maximum pressure of the hurricanes
+     * @return the maximum pressure
      */
     public int findMaxPressure( )
     {
         // replace the following line
-        return 0;
+        int max = hurricanes[0].getPressure();
+        for(int i=1; i<hurricanes.length; i++){
+            if(hurricanes[i].getPressure()>max){
+                max = hurricanes[i].getPressure();
+            }
+        }
+        return max;
     }
 
     /**
-     * Comment this method.
+     * Finds the minimum wind speed of the hurricanes
+     * @return the minimum wind speed
      */
     public int findMinWindSpeed( )
     {
-        // replace the following line
-        return 0;
+        int min = hurricanes[0].getSpeed();
+        for(int i=1; i<hurricanes.length; i++){
+            if(hurricanes[i].getSpeed()<min) min = hurricanes[i].getSpeed();
+        }
+        return min;
     }
 
     /**
-     * Comment this method.
+     * Finds the minimum pressure of the hurricanes
+     * @return the minimum pressure
      */
     public int findMinPressure( )
     {
-        // replace the following line
-        return 0;
+        int min = hurricanes[0].getPressure();
+        for(int i=1; i<hurricanes.length; i++){
+            if(hurricanes[i].getPressure()<min){
+                min = hurricanes[i].getPressure();
+            }
+        }
+        return min;
     }
 
     /**
-     * Comment this method.
+     * Finds the average wind speed of the hurricanes
+     * @return the average wind speed
      */
     public double calculateAverageWindSpeed( )
     {
-        // replace the following line
-        return 0;
+        double sum = hurricanes[0].getSpeed();
+        for(int i=1; i<hurricanes.length; i++){
+            sum+=hurricanes[i].getSpeed();
+        }
+        return sum/hurricanes.length;
     }
 
     /**
-     * Comment this method.
+     * Finds the average pressure of the hurricanes
+     * @return the average pressure
      */
     public double calculateAveragePressure( )
     {
-        // replace the following line
-        return 0;
+        double sum = hurricanes[0].getPressure();
+        for(int i=1; i<hurricanes.length; i++){
+            sum+=hurricanes[i].getPressure();
+        }
+        return sum/hurricanes.length;
     }
 
     /**
-     * Comment this method.
+     * Finds the average category of the hurricanes
+     * @return the average category
      */
     public double calculateAverageCategory( )
     {
-        // replace the following line
-        return 0;
+        double sum = hurricanes[0].determineCategory(hurricanes[0].getSpeed());
+        for(int i=1; i<hurricanes.length; i++){
+            sum+=hurricanes[i].determineCategory(hurricanes[i].getSpeed());
+        }
+        return sum/hurricanes.length;
     }
 
     /**
@@ -140,7 +174,12 @@ public class HurricaneOrganizerArrayName
      */
     public void sortYears()
     {
-        // write this code
+        int min;
+        for(int i=0; i<hurricanes.length; i++){
+            for(int j=i+1; j<hurricanes.length; j++){
+
+            }
+        }
     }
 
     /**
