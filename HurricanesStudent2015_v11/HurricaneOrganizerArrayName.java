@@ -199,72 +199,7 @@ public class HurricaneOrganizerArrayName
     {
         // write this code
     }  
-
-    /**
-     * Sorts descending based upon pressures using a non-recursive merge sort.
-     */
-    public void sortPressures()
-    {
-        // write this code
-    }
     
-    /**
-     * Sorts descending a portion of array based upon pressure, 
-     * using selection sort.
-     * 
-     * @param   start   the first index to start the sort
-     * @param   end     one past the last index to sort; hence, end position
-     *                  is excluded in the sort
-     */
-    private void sortPressuresHelper (int start, int end)
-    {
-        // write this code
-    }
-
-    /**
-     * Sorts ascending based upon wind speeds using a recursive merge sort. 
-     */
-    public void sortWindSpeeds(int low, int high)
-    {
-        // write this code
-    }
-
-    /**
-     * Merges two consecutive parts of an array, using wind speed as a criteria
-     * and a temporary array.  The merge results in an ascending sort between
-     * the two given indices.
-     * 
-     * @precondition the two parts are sorted ascending based upon wind speed
-     * 
-     * @param low   the starting index of one part of the array.
-     *              This index is included in the first half.
-     * @param mid   the starting index of the second part of the array.
-     *              This index is included in the second half.
-     * @param high  the ending index of the second part of the array.  
-     *              This index is included in the merge.
-     */
-    private void mergeWindSpeedsSortHelper(int low, int mid, int high)
-    {
-        // write this code
-    }
-
-    /**
-     * Sequential search for all the hurricanes in a given year.
-     * 
-     * @param   year
-     * @return  an array of objects in Hurricane that occured in
-     *          the parameter year
-     */
-    public Hurricane [] searchYear(int year)
-    {
-        int counter = 0;
-        //Find []h length
-        // write this code
-
-        Hurricane[] h = new Hurricane[counter];
-        // write the code
-        return h;
-    }     
 
     /**
      * Binary search for a hurricane name.
