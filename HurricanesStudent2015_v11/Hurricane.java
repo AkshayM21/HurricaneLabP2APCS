@@ -9,14 +9,17 @@ import java.io.*;
  */
 public class Hurricane
 {
-    //Instance variables
+    private int year;
+    private String month;
+    private int pressure;
+    private int speed;
+    private String name;
 
     /**
      * Initializes a Hurricane object with no information.
      */
-    public Hurricane( )
+    public Hurricane()
     {
-
     }
 
     /**
@@ -31,7 +34,11 @@ public class Hurricane
     public Hurricane(int year, String month, 
     int pressure, int speed, String name)
     {
-
+        this.year = year;
+        this.month = month;
+        this.pressure = pressure;
+        this.speed = speed;
+        this.name = name;
     }
 
     /**
@@ -43,20 +50,25 @@ public class Hurricane
      */
     public int determineCategory(int knots)
     {
-        // replace the following line with code
-        // that determines the category from speed
+        if (knots>=137)
+            return 5;
+        else if (knots>=113)
+            return 4;
+        else if (knots>=96)
+            return 3;
+        else if (knots>=83)
+            return 2;
+        else if (knots>=64)
+            return 1;
         return 0;
     }
-
-    //Getters
 
     /**
      * Comment this method.
      */
     public String getName()
     {
-        // replace the following line
-        return "";
+        return name;
     }
 
     /**
@@ -64,8 +76,7 @@ public class Hurricane
      */
     public String getMonth()
     {
-        // replace the following line
-        return "";
+        return month;
     }
 
     /**
@@ -73,8 +84,7 @@ public class Hurricane
      */
     public int getPressure()
     {
-        // replace the following line
-        return 0;
+        return pressure;
     }
 
     /**
@@ -82,8 +92,7 @@ public class Hurricane
      */
     public int getSpeed()
     {
-        // replace the following line
-        return 0;
+        return speed;
     }
 
     /**
@@ -91,8 +100,7 @@ public class Hurricane
      */
     public int getYear()
     {
-        // replace the following line
-        return 0;
+        return year;
     }
 
     /**
@@ -100,8 +108,7 @@ public class Hurricane
      */
     public int getCategory()
     {
-        // replace the following line
-        return 0;
+        return determineCategory(speed);
     }
 
     /**
@@ -117,9 +124,8 @@ public class Hurricane
      */
     public String toString()
     {
-        return "";
-        //return String.format("%-4d %-5s %-15s %-5d %5d %5d ", 
-        //       year, month, name, category, speed, pressure);
+        return String.format("%-4d %-5s %-15s %-5d %5d %5d ", 
+               year, month, name, determineCategory(speed), speed, pressure);
     }
 
     /**
@@ -127,8 +133,7 @@ public class Hurricane
      */
     public int compareYearTo(Hurricane h)
     {
-        // replace the following line
-        return 0;
+        return ((Comparable)this.year).compareTo((Comparable)(h.year));
     }
 
     /**
@@ -136,8 +141,7 @@ public class Hurricane
      */
     public int compareNameTo(Hurricane h)
     {
-        // replace the following line
-        return 0;
+        return ((Comparable)this.name).compareTo((Comparable)(h.name));
     }
 
     /**
@@ -145,8 +149,7 @@ public class Hurricane
      */
     public int comparePressureTo(Hurricane h)
     {
-        // replace the following line
-        return 0;
+        return ((Comparable)this.pressure).compareTo((Comparable)(h.pressure));
     }
 
     /**
@@ -154,8 +157,7 @@ public class Hurricane
      */
     public int compareSpeedTo(Hurricane h)
     {
-        // replace the following line
-        return 0;
+        return ((Comparable)this.speed).compareTo((Comparable)(h.speed));
     }
 
     /**
@@ -163,7 +165,6 @@ public class Hurricane
      */
     public int compareCategoryTo(Hurricane h)
     {
-        // replace the following line
-        return 0;
+        return ((Comparable)this.determineCategory(this.speed)).compareTo((Comparable)(h.determineCategory(h.speed)));
     }
 }
