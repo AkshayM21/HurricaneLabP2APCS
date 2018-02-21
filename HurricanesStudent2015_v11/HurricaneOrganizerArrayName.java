@@ -174,11 +174,17 @@ public class HurricaneOrganizerArrayName
      */
     public void sortYears()
     {
-        int min;
+        int minIndex;
         for(int i=0; i<hurricanes.length; i++){
+            minIndex = i+1;
             for(int j=i+1; j<hurricanes.length; j++){
-
+                if(hurricanes[j].getYear()<hurricanes[minIndex].getYear()){
+                    minIndex = j;
+                }
             }
+            int temp = hurricanes[i];
+            hurricanes[i] = hurricanes[minIndex];
+            hurricanes[minIndex] = temp;
         }
     }
 
@@ -189,6 +195,15 @@ public class HurricaneOrganizerArrayName
     public void sortNames()
     {
         // write this code
+        Hurricane key;
+        for(int i=1; i<hurricanes.length; i++){
+            key = hurricanes[i];
+            int j = i-1;
+            while(j>=0 && key.compareNameTo(hurricanes[j])==-1){
+                hurricanes[j+1] = hurricanes[j];
+            }
+            hurricane[j+1] = key;
+        }
     }
 
     /**
@@ -197,7 +212,19 @@ public class HurricaneOrganizerArrayName
      */
     public void sortCategories()
     {
-        // write this code
+        int maxIndex;
+        for(int i=0; i<hurricanes.length; i++){
+            maxIndex = i+1;
+            for(int j=i+1; j<hurricanes.length; j++){
+                if(hurricanes[j].determineCategory(hurricanes[j].getSpeed())
+                        > hurricanes[maxIndex].determineCategory(hurricanes[maxIndex].getSpeed(){
+                    maxIndex = j;
+                }
+            }
+            int temp = hurricanes[i];
+            hurricanes[i] = hurricanes[maxIndex];
+            hurricanes[maxIndex] = temp;
+        }
     }  
     
 
@@ -229,11 +256,24 @@ public class HurricaneOrganizerArrayName
     private Hurricane[ ] searchHurricaneNameHelper(String name, int low , int high)
     {
         // Test for the base case when a match is not found
-        return null;
+        if(low>high) return null;
 
-        // Test for match
+        int mid = (low+high)/2;
 
-        
+        if(hurricanes[mid].getName().equals(name)) {
+            ArrayList<Hurricane> al = new ArrayList<Hurricane>();
+            al.add(hurricanes[mid]);
+            int i = mid-1;
+            int j = mid+1;
+            while(i>=0&&hurricanes[i].getName().equals(name)){
+                al.add(hurricanes[i]);
+            }
+            while(j<hurricanes.length && hurricanes[j].getName().equals(name)){
+                al.add(hurricanes[j]);
+            }
+            return al.toArray(new Hurricane[al.size()]);
+        }
+
         
         // Determine if the potential match is in the 
         // "first half" of the considered items in the array
