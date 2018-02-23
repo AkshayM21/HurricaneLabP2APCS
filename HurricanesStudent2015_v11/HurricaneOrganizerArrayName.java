@@ -205,6 +205,33 @@ public class HurricaneOrganizerArrayName
             hurricane[j+1] = key;
         }
     }
+    
+    /**
+     * Sorts ascending based upon wind speeds using a recursive merge sort. 
+     */
+    public void sortWindSpeeds(int low, int high)
+    {
+        // write this code
+    }
+
+    /**
+     * Merges two consecutive parts of an array, using wind speed as a criteria
+     * and a temporary array.  The merge results in an ascending sort between
+     * the two given indices.
+     * 
+     * @precondition the two parts are sorted ascending based upon wind speed
+     * 
+     * @param low   the starting index of one part of the array.
+     *              This index is included in the first half.
+     * @param mid   the starting index of the second part of the array.
+     *              This index is included in the second half.
+     * @param high  the ending index of the second part of the array.  
+     *              This index is included in the merge.
+     */
+    private void mergeWindSpeedsSortHelper(int low, int mid, int high)
+    {
+        // write this code
+    }
 
     /**
      * Sorts descending based upon the hurricanes' categories,

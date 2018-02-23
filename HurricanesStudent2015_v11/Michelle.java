@@ -10,7 +10,6 @@ public class Michelle
 {
     private Hurricane [] hurricanes;
     
-    
     /**
      * Comment this method even though you did not write it.
      * 
@@ -163,7 +162,8 @@ public class Michelle
      */
     public void sortPressures()
     {
-        // write this code
+        int currSize, leftStart;
+        
     }
 
     /**
@@ -176,7 +176,38 @@ public class Michelle
      */
     private void sortPressuresHelper (int start, int end)
     {
-        // write this code
+        int mid = (start+end)/2;
+        int i, j, k;
+        int n1 = mid-start;
+        int n2 = end-mid;
+        int left[n1], right[n2];
+        for (int i=0; i<n1; i++)
+            left[i]=hurricane[i];
+        for (int i=0; i<n2; i++)
+            left[i]=hurricane[mid+i]; 
+        i=n1-1, j=n2-1; k=0;
+        while (i>=0 && j>=0)
+        {
+            if (left[i]>right[i])
+                hurricane[i]=left[i];
+            else
+                hurricane[i]=right[i];
+            k++;
+            i--;
+            j--;
+        }
+        while (i>=0)
+        {
+            hurricane[k]=left[i];
+            i--;
+            k++;
+        }
+        while (j>=0)
+        {
+            hurricane[k]=right[j];
+            j--;
+            k++;
+        }
     }
 
     /**
