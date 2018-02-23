@@ -190,7 +190,7 @@ public class HurricaneOrganizerArrayName
         int minIndex;
         for(int i=0; i<hurricanes.length; i++)
         {
-            minIndex = i+1;
+            minIndex = i;
             for(int j=i+1; j<hurricanes.length; j++)
             {
                 if(hurricanes[j].getYear()<hurricanes[minIndex].getYear())
@@ -216,9 +216,10 @@ public class HurricaneOrganizerArrayName
         {
             key = hurricanes[i];
             int j = i-1;
-            while(j>=0 && key.compareNameTo(hurricanes[j])==-1)
+            while(j>=0 && key.compareNameTo(hurricanes[j])<0)
             {
                 hurricanes[j+1] = hurricanes[j];
+                j--;
             }
             hurricanes[j+1] = key;
         }
@@ -299,7 +300,7 @@ public class HurricaneOrganizerArrayName
         int maxIndex;
         for(int i=0; i<hurricanes.length; i++)
         {
-            maxIndex = i+1;
+            maxIndex = i;
             for(int j=i+1; j<hurricanes.length; j++)
             {
                 if(hurricanes[j].determineCategory(hurricanes[j].getSpeed())
@@ -327,7 +328,7 @@ public class HurricaneOrganizerArrayName
             {
                 int mid = leftStart + currSize -1;
                 int right;
-                if (leftStart+2*currSize-1 > hurricanes.length-1)
+                if (leftStart+2*currSize-1 < hurricanes.length-1)
                     right = hurricanes.length-1;
                 else
                     right = leftStart+2*currSize-1;
@@ -338,7 +339,7 @@ public class HurricaneOrganizerArrayName
 
     /**
      * Sorts descending a portion of array based upon pressure, 
-     * using selection sort.
+     * using merge sort.
      * 
      * @param   start   the first index to start the sort
      * @param   end     one past the last index to sort; hence, end position
@@ -355,31 +356,28 @@ public class HurricaneOrganizerArrayName
         for (int p=0; p<n1; p++)
             left[p]=hurricanes[p];
         for (int p=0; p<n2; p++)
-            left[p]=hurricanes[mid+p]; 
+            right[p]=hurricanes[mid+p]; 
         i=n1-1;
         j=n2-1; 
         k=end-1;
         while (i>=0 && j>=0)
         {
             if (left[i].getPressure()>right[j].getPressure())
-                hurricanes[k]=left[i];
+                hurricanes[k--]=left[i--];
             else
-                hurricanes[k]=right[j];
-            k--;
-            i--;
-            j--;
+                hurricanes[k--]=right[j--];
         }
         while (i>=0)
         {
             hurricanes[k]=left[i];
             i--;
-            k++;
+            k--;
         }
         while (j>=0)
         {
             hurricanes[k]=right[j];
             j--;
-            k++;
+            k--;
         }
     }
 
