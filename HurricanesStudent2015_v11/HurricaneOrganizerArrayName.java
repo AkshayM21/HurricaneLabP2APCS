@@ -253,7 +253,7 @@ public class HurricaneOrganizerArrayName
      * @return  a Hurricane array of all Hurricane objects with a specified name. 
      *          Returns null if there are no matches
      */
-    private Hurricane[ ] searchHurricaneNameHelper(String name, int low , int high)
+    private Hurricane[ ] searchHurricaneNameHelper(String name, int low, int high)
     {
         // Test for the base case when a match is not found
         if(low>high) return null;
@@ -261,24 +261,18 @@ public class HurricaneOrganizerArrayName
         int mid = (low+high)/2;
 
         if(hurricanes[mid].getName().equals(name)) {
-            ArrayList<Hurricane> al = new ArrayList<Hurricane>();
-            al.add(hurricanes[mid]);
-            int i = mid-1;
-            int j = mid+1;
-            while(i>=0&&hurricanes[i].getName().equals(name)){
-                al.add(hurricanes[i]);
-            }
-            while(j<hurricanes.length && hurricanes[j].getName().equals(name)){
-                al.add(hurricanes[j]);
-            }
-            return al.toArray(new Hurricane[al.size()]);
+            return retrieveMatchedNames(name, mid);
         }
 
         
         // Determine if the potential match is in the 
         // "first half" of the considered items in the array
 
-        
+        if(hurricanes[mid].getName().compareTo(name)<0){
+            return searchHurricaneNameHelper(name, low, mid-1);
+        }else{
+            return searchHurricaneNameHelper(name, mid+1, high);
+        }
         
         // The potential match must be in the
         // "second half" of the considered items in the array
@@ -300,13 +294,18 @@ public class HurricaneOrganizerArrayName
     {
         // Find the start where the matches start:
 
-        
-        // Find the end of the matches:
+        ArrayList<Hurricane> al = new ArrayList<Hurricane>();
+        al.add(hurricanes[index]);
+        int i = index-1;
+        int j = index+1;
+        while(i>=0&&hurricanes[i].getName().equals(name)){
+            al.add(hurricanes[i]);
+        }
+        while(j<hurricanes.length && hurricanes[j].getName().equals(name)){
+            al.add(hurricanes[j]);
+        }
+        return al.toArray(new Hurricane[al.size()]);
 
-        
-        // Copy the objects whose names match:
-
-        return null;  // correct this line
     }
 
     /**
