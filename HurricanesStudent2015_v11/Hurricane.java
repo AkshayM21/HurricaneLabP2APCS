@@ -64,7 +64,7 @@ public class Hurricane
     }
 
     /**
-     * Comment this method.
+     * @return name of the hurricane
      */
     public String getName()
     {
@@ -72,7 +72,7 @@ public class Hurricane
     }
 
     /**
-     * Comment this method.
+     * @return month of the hurricane
      */
     public String getMonth()
     {
@@ -80,7 +80,7 @@ public class Hurricane
     }
 
     /**
-     * Comment this method.
+     * @return pressure of the hurricane
      */
     public int getPressure()
     {
@@ -88,7 +88,7 @@ public class Hurricane
     }
 
     /**
-     * Comment this method.
+     * @return speed of the hurricane
      */
     public int getSpeed()
     {
@@ -96,7 +96,7 @@ public class Hurricane
     }
 
     /**
-     * Comment this method.
+     * @return year of the hurricane
      */
     public int getYear()
     {
@@ -104,7 +104,7 @@ public class Hurricane
     }
 
     /**
-     * Comment this method.
+     * @return the category of the hurricane
      */
     public int getCategory()
     {
@@ -112,7 +112,7 @@ public class Hurricane
     }
 
     /**
-     * Comment this method even though you did not write it.
+     * prints the hurricane
      */
     public void print()
     {
@@ -120,7 +120,7 @@ public class Hurricane
     }
 
     /**
-     * Alter code a bit then comment this method even though you did not write it.
+     * @return String version of the hurricane
      */
     public String toString()
     {
@@ -129,7 +129,10 @@ public class Hurricane
     }
 
     /**
-     * Comment this method.
+     * @return 1 if this hurricane's year is more recent than the one it is being compared to
+     *          0 if they are equal
+     *          -1 if this one's year is less
+     * @param h the hurricane you want to compare the current hurricane to
      */
     public int compareYearTo(Hurricane h)
     {
@@ -137,7 +140,10 @@ public class Hurricane
     }
 
     /**
-     * Comment this method.
+     * @return 1 if this hurricane's name is later in the alphabet than the one it is being compared to
+     *          0 if they are equal
+     *          -1 if this one's name is earlier
+     * @param h the hurricane you want to compare the current hurricane to
      */
     public int compareNameTo(Hurricane h)
     {
@@ -145,7 +151,10 @@ public class Hurricane
     }
 
     /**
-     * Comment this method.
+     * @return 1 if this hurricane's pressure is greater than the one it is being compared to
+     *          0 if they are equal
+     *          -1 if this one's pressure is less
+     * @param h the hurricane you want to compare the current hurricane to
      */
     public int comparePressureTo(Hurricane h)
     {
@@ -153,7 +162,10 @@ public class Hurricane
     }
 
     /**
-     * Comment this method.
+     * @return 1 if this hurricane's speed is greater than the one it is being compared to
+     *          0 if they are equal
+     *          -1 if this one's speed is less
+     * @param h the hurricane you want to compare the current hurricane to
      */
     public int compareSpeedTo(Hurricane h)
     {
@@ -161,7 +173,10 @@ public class Hurricane
     }
 
     /**
-     * Comment this method.
+     * @return 1 if this hurricane's category is greater than the one it is being compared to
+     *          0 if they are equal
+     *          -1 if this one's category is less
+     * @param h the hurricane you want to compare the current hurricane to
      */
     public int compareCategoryTo(Hurricane h)
     {

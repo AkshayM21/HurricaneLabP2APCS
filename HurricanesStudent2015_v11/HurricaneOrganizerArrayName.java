@@ -184,7 +184,7 @@ public class HurricaneOrganizerArrayName
                     minIndex = j;
                 }
             }
-            int temp = hurricanes[i];
+            Hurricane temp = hurricanes[i];
             hurricanes[i] = hurricanes[minIndex];
             hurricanes[minIndex] = temp;
         }
@@ -204,7 +204,7 @@ public class HurricaneOrganizerArrayName
             while(j>=0 && key.compareNameTo(hurricanes[j])==-1){
                 hurricanes[j+1] = hurricanes[j];
             }
-            hurricane[j+1] = key;
+            hurricanes[j+1] = key;
         }
     }
     
@@ -245,9 +245,10 @@ public class HurricaneOrganizerArrayName
             values2[i] = hurricanes[mid+i];
         }
         int j = 0,k = 0;
-        for(int i=low; i<high; i++){
+        int i;
+        for(i=low; i<high; i++){
             if(j>=values1.length||k>=values2.length) break;
-            if(values1[j]<values2[k]){
+            if(values1[j].getSpeed()<values2[k].getSpeed()){
                 hurricanes[i] = values2[k++];
             }else{
                 hurricanes[i] = values1[j++];
@@ -277,13 +278,109 @@ public class HurricaneOrganizerArrayName
                     maxIndex = j;
                 }
             }
-            int temp = hurricanes[i];
+            Hurricane temp = hurricanes[i];
             hurricanes[i] = hurricanes[maxIndex];
             hurricanes[maxIndex] = temp;
         }
     }  
     
 
+    /**
+     * Sorts descending based upon pressures using a non-recursive merge sort.
+     */
+    public void sortPressures()
+    {
+        int currSize, leftStart;
+        for (currSize=1; currSize<=hurricanes.length-1; currSize=2*currSize)
+        {
+            for (leftStart=0; leftStart<hurricanes.length-1; leftStart+=2*currSize)
+            {
+                int mid = leftStart + currSize -1;
+                int right;
+                if (leftStart+2*currSize-1 > hurricanes.length-1)
+                    right = hurricanes.length-1;
+                else
+                    right = leftStart+2*currSize-1;
+                sortPressuresHelper(leftStart, right);
+            }
+        }
+    }
+
+    /**
+     * Sorts descending a portion of array based upon pressure, 
+     * using selection sort.
+     * 
+     * @param   start   the first index to start the sort
+     * @param   end     one past the last index to sort; hence, end position
+     *                  is excluded in the sort
+     */
+    private void sortPressuresHelper (int start, int end)
+    {
+        int mid = (start+end)/2;
+        int i, j, k;
+        int n1 = mid-start;
+        int n2 = end-mid;
+        Hurricane[] left = new Hurricane[n1];
+        Hurricane[] right = new Hurricane[n2];
+        for (int p=0; p<n1; p++)
+            left[p]=hurricanes[p];
+        for (int p=0; p<n2; p++)
+            left[p]=hurricanes[mid+p]; 
+        i=n1-1;
+        j=n2-1; 
+        k=end-1;
+        while (i>=0 && j>=0)
+        {
+            if (left[i].getPressure()>right[j].getPressure())
+                hurricanes[k]=left[i];
+            else
+                hurricanes[k]=right[j];
+            k--;
+            i--;
+            j--;
+        }
+        while (i>=0)
+        {
+            hurricanes[k]=left[i];
+            i--;
+            k++;
+        }
+        while (j>=0)
+        {
+            hurricanes[k]=right[j];
+            j--;
+            k++;
+        }
+    }
+
+    /**
+     * Sequential search for all the hurricanes in a given year.
+     * 
+     * @param   year
+     * @return  an array of objects in Hurricane that occured in
+     *          the parameter year
+     */
+    public Hurricane [] searchYear(int year)
+    {
+        int counter = 0;
+        for (int i=0; i<hurricanes.length; i++)
+        {
+            if (hurricanes[i].getYear()==year)
+                counter++;
+        }
+        Hurricane[] h = new Hurricane[counter];
+        int index=0;
+        for (int i=0; i<hurricanes.length; i++)
+        {
+            if (hurricanes[i].getYear()==year)
+            {
+                h[index]=hurricanes[i];
+                index++;
+            }
+        }
+        return h;
+    } 
+    
     /**
      * Binary search for a hurricane name.
      * 
@@ -446,6 +543,7 @@ public class HurricaneOrganizerArrayName
             calculateAverageCategory( ));
     }
 
+    
     /**
      * Add comments here even though you did not write the method.
      */
