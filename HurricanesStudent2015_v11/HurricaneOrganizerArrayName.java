@@ -13,8 +13,8 @@ public class HurricaneOrganizerArrayName
     private Hurricane [] hurricanes;
 
     /**
-     * Comment this constructor even though you did not write it.
-     * 
+     * Creates a new HurricaneOrganizerArrayName object and initializes relevant variables
+     * @param filename the name of the file with hurricane data
      * @throws IOException  if file with the hurricane information cannot be found
      */
     public HurricaneOrganizerArrayName(String filename)throws IOException
@@ -23,8 +23,8 @@ public class HurricaneOrganizerArrayName
     }
 
     /**
-     * Comment this method even though you did not write it.
-     * 
+     * Finds the length of the file (number of lines)
+     * @param filename the name of the file
      * @throws IOException  if file with the hurricane information cannot be found
      */
     private static int determineFileLength(String filename) throws IOException
@@ -42,7 +42,9 @@ public class HurricaneOrganizerArrayName
     }
 
     /**
-     * Comment this method even though you did not write it.
+     * Reads the file and populates the hurricane array
+     * @param filename the name of the file to pull the data
+     * @throws IOException if the file with the hurricane information cannot be found
      */
     public void readFile(String filename) throws IOException
     {
@@ -211,7 +213,11 @@ public class HurricaneOrganizerArrayName
      */
     public void sortWindSpeeds(int low, int high)
     {
-        // write this code
+        if(low<high){
+            sortWindSpeeds(low, (low+high)/2);
+            sortWindSpeeds((low+high)/2 + 1, high);
+            mergeWindSpeedsSortHelper(low, (low+high)/2, high);
+        }
     }
 
     /**
@@ -230,7 +236,30 @@ public class HurricaneOrganizerArrayName
      */
     private void mergeWindSpeedsSortHelper(int low, int mid, int high)
     {
-        // write this code
+        Hurricane[] values1 = new Hurricane[mid-1-low];
+        Hurricane[] values2 = new Hurricane[high-mid];
+        for(int i=0; i<values1.length; i++){
+            values1[i] = hurricanes[low+i];
+        }
+        for(int i=0; i<values2.length; i++){
+            values2[i] = hurricanes[mid+i];
+        }
+        int j = 0,k = 0;
+        for(int i=low; i<high; i++){
+            if(j>=values1.length||k>=values2.length) break;
+            if(values1[j]<values2[k]){
+                hurricanes[i] = values2[k++];
+            }else{
+                hurricanes[i] = values1[j++];
+            }
+        }
+        while(j<values1.length){
+            hurricanes[i++] = values1[j++];
+        }
+        while(k<values2.length){
+            hurricanes[i++] = values2[k++];
+        }
+
     }
 
     /**
@@ -244,7 +273,7 @@ public class HurricaneOrganizerArrayName
             maxIndex = i+1;
             for(int j=i+1; j<hurricanes.length; j++){
                 if(hurricanes[j].determineCategory(hurricanes[j].getSpeed())
-                        > hurricanes[maxIndex].determineCategory(hurricanes[maxIndex].getSpeed(){
+                        > hurricanes[maxIndex].determineCategory(hurricanes[maxIndex].getSpeed())){
                     maxIndex = j;
                 }
             }
