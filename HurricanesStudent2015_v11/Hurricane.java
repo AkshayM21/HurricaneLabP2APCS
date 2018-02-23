@@ -140,7 +140,8 @@ public class Hurricane
     }
 
     /**
-     * @return 1 if this hurricane's name is later in the alphabet than the one it is being compared to
+     * @return 1 if this hurricane's name is later in the alphabet than the one 
+     * it is being compared to
      *          0 if they are equal
      *          -1 if this one's name is earlier
      * @param h the hurricane you want to compare the current hurricane to
@@ -180,6 +181,7 @@ public class Hurricane
      */
     public int compareCategoryTo(Hurricane h)
     {
-        return ((Comparable)this.determineCategory(this.speed)).compareTo((Comparable)(h.determineCategory(h.speed)));
+        return ((Comparable)this.determineCategory(this.speed)).compareTo((Comparable)
+                (h.determineCategory(h.speed)));
     }
 }

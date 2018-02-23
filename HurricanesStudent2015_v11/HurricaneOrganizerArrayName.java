@@ -81,8 +81,10 @@ public class HurricaneOrganizerArrayName
     {
         // replace the following line
         int max = hurricanes[0].getSpeed();
-        for(int i=1; i<hurricanes.length; i++){
-            if(hurricanes[i].getSpeed()>max) max = hurricanes[i].getSpeed();
+        for(int i=1; i<hurricanes.length; i++)
+        {
+            if(hurricanes[i].getSpeed()>max)
+                max = hurricanes[i].getSpeed();
         }
         return max;
     }
@@ -95,8 +97,10 @@ public class HurricaneOrganizerArrayName
     {
         // replace the following line
         int max = hurricanes[0].getPressure();
-        for(int i=1; i<hurricanes.length; i++){
-            if(hurricanes[i].getPressure()>max){
+        for(int i=1; i<hurricanes.length; i++)
+        {
+            if(hurricanes[i].getPressure()>max)
+            {
                 max = hurricanes[i].getPressure();
             }
         }
@@ -110,8 +114,10 @@ public class HurricaneOrganizerArrayName
     public int findMinWindSpeed( )
     {
         int min = hurricanes[0].getSpeed();
-        for(int i=1; i<hurricanes.length; i++){
-            if(hurricanes[i].getSpeed()<min) min = hurricanes[i].getSpeed();
+        for(int i=1; i<hurricanes.length; i++)
+        {
+            if(hurricanes[i].getSpeed()<min) 
+                min = hurricanes[i].getSpeed();
         }
         return min;
     }
@@ -123,8 +129,10 @@ public class HurricaneOrganizerArrayName
     public int findMinPressure( )
     {
         int min = hurricanes[0].getPressure();
-        for(int i=1; i<hurricanes.length; i++){
-            if(hurricanes[i].getPressure()<min){
+        for(int i=1; i<hurricanes.length; i++)
+        {
+            if(hurricanes[i].getPressure()<min)
+            {
                 min = hurricanes[i].getPressure();
             }
         }
@@ -138,7 +146,8 @@ public class HurricaneOrganizerArrayName
     public double calculateAverageWindSpeed( )
     {
         double sum = hurricanes[0].getSpeed();
-        for(int i=1; i<hurricanes.length; i++){
+        for(int i=1; i<hurricanes.length; i++)
+        {
             sum+=hurricanes[i].getSpeed();
         }
         return sum/hurricanes.length;
@@ -151,7 +160,8 @@ public class HurricaneOrganizerArrayName
     public double calculateAveragePressure( )
     {
         double sum = hurricanes[0].getPressure();
-        for(int i=1; i<hurricanes.length; i++){
+        for(int i=1; i<hurricanes.length; i++)
+        {
             sum+=hurricanes[i].getPressure();
         }
         return sum/hurricanes.length;
@@ -164,7 +174,8 @@ public class HurricaneOrganizerArrayName
     public double calculateAverageCategory( )
     {
         double sum = hurricanes[0].determineCategory(hurricanes[0].getSpeed());
-        for(int i=1; i<hurricanes.length; i++){
+        for(int i=1; i<hurricanes.length; i++)
+        {
             sum+=hurricanes[i].determineCategory(hurricanes[i].getSpeed());
         }
         return sum/hurricanes.length;
@@ -177,10 +188,13 @@ public class HurricaneOrganizerArrayName
     public void sortYears()
     {
         int minIndex;
-        for(int i=0; i<hurricanes.length; i++){
+        for(int i=0; i<hurricanes.length; i++)
+        {
             minIndex = i+1;
-            for(int j=i+1; j<hurricanes.length; j++){
-                if(hurricanes[j].getYear()<hurricanes[minIndex].getYear()){
+            for(int j=i+1; j<hurricanes.length; j++)
+            {
+                if(hurricanes[j].getYear()<hurricanes[minIndex].getYear())
+                {
                     minIndex = j;
                 }
             }
@@ -198,10 +212,12 @@ public class HurricaneOrganizerArrayName
     {
         // write this code
         Hurricane key;
-        for(int i=1; i<hurricanes.length; i++){
+        for(int i=1; i<hurricanes.length; i++)
+        {
             key = hurricanes[i];
             int j = i-1;
-            while(j>=0 && key.compareNameTo(hurricanes[j])==-1){
+            while(j>=0 && key.compareNameTo(hurricanes[j])==-1)
+            {
                 hurricanes[j+1] = hurricanes[j];
             }
             hurricanes[j+1] = key;
@@ -210,10 +226,13 @@ public class HurricaneOrganizerArrayName
     
     /**
      * Sorts ascending based upon wind speeds using a recursive merge sort. 
+     * @param low the low index
+     * @param high the high index
      */
     public void sortWindSpeeds(int low, int high)
     {
-        if(low<high){
+        if(low<high)
+        {
             sortWindSpeeds(low, (low+high)/2);
             sortWindSpeeds((low+high)/2 + 1, high);
             mergeWindSpeedsSortHelper(low, (low+high)/2, high);
@@ -238,29 +257,37 @@ public class HurricaneOrganizerArrayName
     {
         Hurricane[] values1 = new Hurricane[mid-1-low];
         Hurricane[] values2 = new Hurricane[high-mid];
-        for(int i=0; i<values1.length; i++){
+        for(int i=0; i<values1.length; i++)
+        {
             values1[i] = hurricanes[low+i];
         }
-        for(int i=0; i<values2.length; i++){
+        for(int i=0; i<values2.length; i++)
+        {
             values2[i] = hurricanes[mid+i];
         }
         int j = 0,k = 0;
         int i;
-        for(i=low; i<high; i++){
-            if(j>=values1.length||k>=values2.length) break;
-            if(values1[j].getSpeed()<values2[k].getSpeed()){
+        for(i=low; i<high; i++)
+        {
+            if(j>=values1.length||k>=values2.length) 
+                break;
+            if(values1[j].getSpeed()<values2[k].getSpeed())
+            {
                 hurricanes[i] = values2[k++];
-            }else{
+            }
+            else
+            {
                 hurricanes[i] = values1[j++];
             }
         }
-        while(j<values1.length){
+        while(j<values1.length)
+        {
             hurricanes[i++] = values1[j++];
         }
-        while(k<values2.length){
+        while(k<values2.length)
+        {
             hurricanes[i++] = values2[k++];
         }
-
     }
 
     /**
@@ -270,11 +297,14 @@ public class HurricaneOrganizerArrayName
     public void sortCategories()
     {
         int maxIndex;
-        for(int i=0; i<hurricanes.length; i++){
+        for(int i=0; i<hurricanes.length; i++)
+        {
             maxIndex = i+1;
-            for(int j=i+1; j<hurricanes.length; j++){
+            for(int j=i+1; j<hurricanes.length; j++)
+            {
                 if(hurricanes[j].determineCategory(hurricanes[j].getSpeed())
-                        > hurricanes[maxIndex].determineCategory(hurricanes[maxIndex].getSpeed())){
+                        > hurricanes[maxIndex].determineCategory(hurricanes[maxIndex].getSpeed()))
+                {
                     maxIndex = j;
                 }
             }
@@ -356,9 +386,9 @@ public class HurricaneOrganizerArrayName
     /**
      * Sequential search for all the hurricanes in a given year.
      * 
-     * @param   year
+     * @param   year the year you want to find
      * @return  an array of objects in Hurricane that occured in
-     *          the parameter year
+     *          the parameter year    
      */
     public Hurricane [] searchYear(int year)
     {
@@ -413,7 +443,8 @@ public class HurricaneOrganizerArrayName
 
         int mid = (low+high)/2;
 
-        if(hurricanes[mid].getName().equals(name)) {
+        if(hurricanes[mid].getName().equals(name)) 
+        {
             return retrieveMatchedNames(name, mid);
         }
 
@@ -421,9 +452,12 @@ public class HurricaneOrganizerArrayName
         // Determine if the potential match is in the 
         // "first half" of the considered items in the array
 
-        if(hurricanes[mid].getName().compareTo(name)<0){
+        if(hurricanes[mid].getName().compareTo(name)<0)
+        {
             return searchHurricaneNameHelper(name, low, mid-1);
-        }else{
+        }
+        else
+        {
             return searchHurricaneNameHelper(name, mid+1, high);
         }
         
@@ -451,14 +485,15 @@ public class HurricaneOrganizerArrayName
         al.add(hurricanes[index]);
         int i = index-1;
         int j = index+1;
-        while(i>=0&&hurricanes[i].getName().equals(name)){
+        while(i>=0&&hurricanes[i].getName().equals(name))
+        {
             al.add(hurricanes[i]);
         }
-        while(j<hurricanes.length && hurricanes[j].getName().equals(name)){
+        while(j<hurricanes.length && hurricanes[j].getName().equals(name))
+        {
             al.add(hurricanes[j]);
         }
         return al.toArray(new Hurricane[al.size()]);
-
     }
 
     /**
