@@ -462,7 +462,7 @@ public class HurricaneOrganizerArrayName
     }
 
     /**
-     * Comment this method even though you did not write it.
+     * Prints the header for the table.
      */
     public void printHeader()
     {
@@ -472,7 +472,7 @@ public class HurricaneOrganizerArrayName
     }
 
     /**
-     * Comment this method even though you did not write it.
+     * Calls a helper method to print the Hurricanes.
      */
     public void printHurricanes()
     {
@@ -480,7 +480,8 @@ public class HurricaneOrganizerArrayName
     }
 
     /**
-     * Add comments here even though you did not write the method.
+     * Prints the hurricane data.
+     * @param hurs an array of hurricane objects
      */
     public void printHurricanes(Hurricane [] hurs)
     {
@@ -497,7 +498,7 @@ public class HurricaneOrganizerArrayName
     }
 
     /**
-     * Add comments here even though you did not write the method.
+     * Prints the menu.
      */
     public void printMenu()
     {
@@ -516,7 +517,7 @@ public class HurricaneOrganizerArrayName
     }
 
     /**
-     * Add comments here even though you did not write the method.
+     * Prints the max and min statistics.
      */
     public void printMaxAndMin( )
     {
@@ -531,7 +532,7 @@ public class HurricaneOrganizerArrayName
     }
 
     /**
-     * Add comments here even though you did not write the method.
+     * Prints the averages of the statistics.
      */
     public void printAverages( )
     {
@@ -545,7 +546,8 @@ public class HurricaneOrganizerArrayName
 
     
     /**
-     * Add comments here even though you did not write the method.
+     * Interact master method that controls user interaction with the program.
+     * @return returns if it is finished
      */
     public boolean interactWithUser( )
     {
@@ -613,7 +615,7 @@ public class HurricaneOrganizerArrayName
     }
 
     /**
-     * Comment the method even though you did not write it.
+     * Runs the entire program.
      * 
      * @param args  user's information from the command line
      * 
