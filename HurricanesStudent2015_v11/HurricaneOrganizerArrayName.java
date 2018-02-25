@@ -301,10 +301,9 @@ public class HurricaneOrganizerArrayName
         for(int i=0; i<hurricanes.length; i++)
         {
             maxIndex = i;
-            for(int j=i+1; j<hurricanes.length; j++)
-            {
+            for(int j=i+1; j<hurricanes.length; j++){
                 if(hurricanes[j].determineCategory(hurricanes[j].getSpeed())
-                        > hurricanes[maxIndex].determineCategory(hurricanes[maxIndex].getSpeed()))
+                        >hurricanes[maxIndex].determineCategory(hurricanes[maxIndex].getSpeed()))
                 {
                     maxIndex = j;
                 }
@@ -313,6 +312,7 @@ public class HurricaneOrganizerArrayName
             hurricanes[i] = hurricanes[maxIndex];
             hurricanes[maxIndex] = temp;
         }
+        
     }  
     
 
