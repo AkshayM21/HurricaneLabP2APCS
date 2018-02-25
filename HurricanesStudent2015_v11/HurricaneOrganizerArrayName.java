@@ -312,7 +312,7 @@ public class HurricaneOrganizerArrayName
             hurricanes[i] = hurricanes[maxIndex];
             hurricanes[maxIndex] = temp;
         }
-        
+
     }  
     
 

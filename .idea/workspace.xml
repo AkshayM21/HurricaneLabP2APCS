@@ -2,14 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33b1392b-b57e-4d8e-b39e-5a68adc8306b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/HurricaneLabP2APCS.iml" afterPath="$PROJECT_DIR$/.idea/HurricaneLabP2APCS.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/HurricanesStudent2015_v11/Hurricane.class" afterPath="$PROJECT_DIR$/HurricanesStudent2015_v11/Hurricane.class" />
-      <change beforePath="$PROJECT_DIR$/HurricanesStudent2015_v11/Hurricane.ctxt" afterPath="$PROJECT_DIR$/HurricanesStudent2015_v11/Hurricane.ctxt" />
-      <change beforePath="$PROJECT_DIR$/HurricanesStudent2015_v11/Hurricane.java" afterPath="$PROJECT_DIR$/HurricanesStudent2015_v11/Hurricane.java" />
-      <change beforePath="$PROJECT_DIR$/HurricanesStudent2015_v11/HurricaneOrganizerArrayName.class" afterPath="$PROJECT_DIR$/HurricanesStudent2015_v11/HurricaneOrganizerArrayName.class" />
-      <change beforePath="$PROJECT_DIR$/HurricanesStudent2015_v11/HurricaneOrganizerArrayName.ctxt" afterPath="$PROJECT_DIR$/HurricanesStudent2015_v11/HurricaneOrganizerArrayName.ctxt" />
       <change beforePath="$PROJECT_DIR$/HurricanesStudent2015_v11/HurricaneOrganizerArrayName.java" afterPath="$PROJECT_DIR$/HurricanesStudent2015_v11/HurricaneOrganizerArrayName.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -64,12 +56,12 @@
       <file leaf-file-name="HurricaneOrganizerArrayName.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/HurricanesStudent2015_v11/HurricaneOrganizerArrayName.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="314" column="8" lean-forward="false" selection-start-line="314" selection-start-column="8" selection-end-line="314" selection-end-column="8" />
+            <state relative-caret-position="785">
+              <caret line="333" column="46" lean-forward="true" selection-start-line="333" selection-start-column="46" selection-end-line="333" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#15039#15040#0" expanded="true" />
-                <element signature="e#15082#15083#0" expanded="true" />
+                <element signature="e#15031#15032#0" expanded="true" />
+                <element signature="e#15074#15075#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -359,16 +351,15 @@
       <updated>1519236877818</updated>
       <workItem from="1519236879763" duration="2806000" />
       <workItem from="1519416054203" duration="7895000" />
-      <workItem from="1519527144032" duration="1353000" />
+      <workItem from="1519527144032" duration="1958000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12054000" />
+    <option name="totallyTimeSpent" value="12659000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -514,8 +505,8 @@
           <caret line="12" column="36" lean-forward="true" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#15039#15040#0" expanded="true" />
-            <element signature="e#15082#15083#0" expanded="true" />
+            <element signature="e#15031#15032#0" expanded="true" />
+            <element signature="e#15074#15075#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -580,8 +571,8 @@
           <caret line="272" column="13" lean-forward="true" selection-start-line="272" selection-start-column="13" selection-end-line="272" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#15039#15040#0" expanded="true" />
-            <element signature="e#15082#15083#0" expanded="true" />
+            <element signature="e#15031#15032#0" expanded="true" />
+            <element signature="e#15074#15075#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -683,12 +674,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HurricanesStudent2015_v11/HurricaneOrganizerArrayName.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="314" column="8" lean-forward="false" selection-start-line="314" selection-start-column="8" selection-end-line="314" selection-end-column="8" />
+        <state relative-caret-position="785">
+          <caret line="333" column="46" lean-forward="true" selection-start-line="333" selection-start-column="46" selection-end-line="333" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#15039#15040#0" expanded="true" />
-            <element signature="e#15082#15083#0" expanded="true" />
+            <element signature="e#15031#15032#0" expanded="true" />
+            <element signature="e#15074#15075#0" expanded="true" />
           </folding>
         </state>
       </provider>
