@@ -270,7 +270,7 @@ public class HurricaneOrganizerArrayName
         int i;
         for(i=low; i<high; i++)
         {
-            if(j>=values1.length||k>=values2.length) 
+            if(j>=values1.length||k>=values2.length)
                 break;
             if(values1[j].getSpeed()<values2[k].getSpeed())
             {
@@ -341,43 +341,45 @@ public class HurricaneOrganizerArrayName
      * Sorts descending a portion of array based upon pressure, 
      * using merge sort.
      * 
-     * @param   start   the first index to start the sort
-     * @param   end     one past the last index to sort; hence, end position
+     * @param   low   the first index to start the sort
+     * @param   high     one past the last index to sort; hence, end position
      *                  is excluded in the sort
      */
-    private void sortPressuresHelper (int start, int end)
+    private void sortPressuresHelper (int low, int high)
     {
-        int mid = (start+end)/2;
-        int i, j, k;
-        int n1 = mid-start;
-        int n2 = end-mid;
-        Hurricane[] left = new Hurricane[n1];
-        Hurricane[] right = new Hurricane[n2];
-        for (int p=0; p<n1; p++)
-            left[p]=hurricanes[p];
-        for (int p=0; p<n2; p++)
-            right[p]=hurricanes[mid+p]; 
-        i=n1-1;
-        j=n2-1; 
-        k=end-1;
-        while (i>=0 && j>=0)
+        int mid = (low+high)/2;
+        Hurricane[] values1 = new Hurricane[mid-1-low];
+        Hurricane[] values2 = new Hurricane[high-mid];
+        for(int i=0; i<values1.length; i++)
         {
-            if (left[i].getPressure()>right[j].getPressure())
-                hurricanes[k--]=left[i--];
+            values1[i] = hurricanes[low+i];
+        }
+        for(int i=0; i<values2.length; i++)
+        {
+            values2[i] = hurricanes[mid+i];
+        }
+        int j = 0,k = 0;
+        int i;
+        for(i=low; i<high; i++)
+        {
+            if(j>=values1.length||k>=values2.length)
+                break;
+            if(values1[j].getPressure()<values2[k].getPressure())
+            {
+                hurricanes[i] = values2[k++];
+            }
             else
-                hurricanes[k--]=right[j--];
+            {
+                hurricanes[i] = values1[j++];
+            }
         }
-        while (i>=0)
+        while(j<values1.length)
         {
-            hurricanes[k]=left[i];
-            i--;
-            k--;
+            hurricanes[i++] = values1[j++];
         }
-        while (j>=0)
+        while(k<values2.length)
         {
-            hurricanes[k]=right[j];
-            j--;
-            k--;
+            hurricanes[i++] = values2[k++];
         }
     }
 
