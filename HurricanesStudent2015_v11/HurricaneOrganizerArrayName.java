@@ -322,7 +322,7 @@ public class HurricaneOrganizerArrayName
     public void sortPressures()
     {
         int currSize, leftStart;
-        for (currSize=1; currSize<=hurricanes.length-1; currSize=2*currSize)
+        for (currSize=1; currSize<=hurricanes.length-1; currSize*=2)
         {
             for (leftStart=0; leftStart<hurricanes.length-1; leftStart+=2*currSize)
             {
@@ -347,6 +347,7 @@ public class HurricaneOrganizerArrayName
      */
     private void sortPressuresHelper (int low, int high)
     {
+        
         int mid = (low+high)/2;
         Hurricane[] values1 = new Hurricane[mid-1-low];
         Hurricane[] values2 = new Hurricane[high-mid];
@@ -356,6 +357,11 @@ public class HurricaneOrganizerArrayName
         }
         for(int i=0; i<values2.length; i++)
         {
+            System.out.println(i);
+            System.out.println(mid+i);
+            System.out.println(values2.length);
+            System.out.println(hurricanes.length);
+            System.out.println();
             values2[i] = hurricanes[mid+i];
         }
         int j = 0,k = 0;
@@ -454,11 +460,11 @@ public class HurricaneOrganizerArrayName
 
         if(hurricanes[mid].getName().compareTo(name)<0)
         {
-            return searchHurricaneNameHelper(name, low, mid-1);
+            return searchHurricaneNameHelper(name, mid+1, high);
         }
         else
         {
-            return searchHurricaneNameHelper(name, mid+1, high);
+            return searchHurricaneNameHelper(name, low, mid-1);
         }
         
         // The potential match must be in the
@@ -487,11 +493,11 @@ public class HurricaneOrganizerArrayName
         int j = index+1;
         while(i>=0&&hurricanes[i].getName().equals(name))
         {
-            al.add(hurricanes[i]);
+            al.add(hurricanes[i--]);
         }
         while(j<hurricanes.length && hurricanes[j].getName().equals(name))
         {
-            al.add(hurricanes[j]);
+            al.add(hurricanes[j--]);
         }
         return al.toArray(new Hurricane[al.size()]);
     }
@@ -520,6 +526,7 @@ public class HurricaneOrganizerArrayName
      */
     public void printHurricanes(Hurricane [] hurs)
     {
+        if(hurs==null) return;
         if(hurs.length == 0)
         {
             System.out.println("\nVoid of hurricane data.");
