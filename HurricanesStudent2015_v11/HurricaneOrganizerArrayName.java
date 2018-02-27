@@ -224,7 +224,7 @@ public class HurricaneOrganizerArrayName
             hurricanes[j+1] = key;
         }
     }
-    
+
     /**
      * Sorts ascending based upon wind speeds using a recursive merge sort. 
      * @param low the low index
@@ -256,7 +256,7 @@ public class HurricaneOrganizerArrayName
      */
     private void mergeWindSpeedsSortHelper(int low, int mid, int high)
     {
-        Hurricane[] values1 = new Hurricane[mid-1-low];
+        Hurricane[] values1 = new Hurricane[mid-low+1];
         Hurricane[] values2 = new Hurricane[high-mid];
         for(int i=0; i<values1.length; i++)
         {
@@ -264,7 +264,7 @@ public class HurricaneOrganizerArrayName
         }
         for(int i=0; i<values2.length; i++)
         {
-            values2[i] = hurricanes[mid+i];
+            values2[i] = hurricanes[mid+1+i];
         }
         int j = 0,k = 0;
         int i;
@@ -272,7 +272,7 @@ public class HurricaneOrganizerArrayName
         {
             if(j>=values1.length||k>=values2.length)
                 break;
-            if(values1[j].getSpeed()<values2[k].getSpeed())
+            if(values1[j].getSpeed()>values2[k].getSpeed())
             {
                 hurricanes[i] = values2[k++];
             }
@@ -303,7 +303,7 @@ public class HurricaneOrganizerArrayName
             maxIndex = i;
             for(int j=i+1; j<hurricanes.length; j++){
                 if(hurricanes[j].determineCategory(hurricanes[j].getSpeed())
-                        >hurricanes[maxIndex].determineCategory(hurricanes[maxIndex].getSpeed()))
+                >hurricanes[maxIndex].determineCategory(hurricanes[maxIndex].getSpeed()))
                 {
                     maxIndex = j;
                 }
@@ -314,7 +314,6 @@ public class HurricaneOrganizerArrayName
         }
 
     }  
-    
 
     /**
      * Sorts descending based upon pressures using a non-recursive merge sort.
@@ -328,11 +327,11 @@ public class HurricaneOrganizerArrayName
             {
                 int mid = leftStart + currSize -1;
                 int right;
-                if (leftStart+2*currSize-1 < hurricanes.length-1)
+                if (leftStart+2*currSize-1 > hurricanes.length-1)
                     right = hurricanes.length-1;
                 else
                     right = leftStart+2*currSize-1;
-                sortPressuresHelper(leftStart, right);
+                sortPressuresHelper(leftStart, mid, right);
             }
         }
     }
@@ -345,11 +344,9 @@ public class HurricaneOrganizerArrayName
      * @param   high     one past the last index to sort; hence, end position
      *                  is excluded in the sort
      */
-    private void sortPressuresHelper (int low, int high)
+    private void sortPressuresHelper (int low, int mid, int high)
     {
-        
-        int mid = (low+high)/2;
-        Hurricane[] values1 = new Hurricane[mid-1-low];
+        Hurricane[] values1 = new Hurricane[mid-low+1];
         Hurricane[] values2 = new Hurricane[high-mid];
         for(int i=0; i<values1.length; i++)
         {
@@ -357,12 +354,7 @@ public class HurricaneOrganizerArrayName
         }
         for(int i=0; i<values2.length; i++)
         {
-            System.out.println(i);
-            System.out.println(mid+i);
-            System.out.println(values2.length);
-            System.out.println(hurricanes.length);
-            System.out.println();
-            values2[i] = hurricanes[mid+i];
+            values2[i] = hurricanes[mid+i+1];
         }
         int j = 0,k = 0;
         int i;
@@ -416,7 +408,7 @@ public class HurricaneOrganizerArrayName
         }
         return h;
     } 
-    
+
     /**
      * Binary search for a hurricane name.
      * 
@@ -454,7 +446,6 @@ public class HurricaneOrganizerArrayName
             return retrieveMatchedNames(name, mid);
         }
 
-        
         // Determine if the potential match is in the 
         // "first half" of the considered items in the array
 
@@ -466,11 +457,10 @@ public class HurricaneOrganizerArrayName
         {
             return searchHurricaneNameHelper(name, low, mid-1);
         }
-        
+
         // The potential match must be in the
         // "second half" of the considered items in the array
 
-        
     }
 
     /**
@@ -586,7 +576,6 @@ public class HurricaneOrganizerArrayName
             calculateAverageCategory( ));
     }
 
-    
     /**
      * Interact master method that controls user interaction with the program.
      * @return returns if it is finished
