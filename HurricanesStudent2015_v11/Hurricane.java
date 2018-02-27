@@ -1,5 +1,3 @@
-import java.io.*;
-
 /**
  * Models hurricane information, including categories.  
  * Works with HurricaneOrganizer, provides object and comparison skeletons.
