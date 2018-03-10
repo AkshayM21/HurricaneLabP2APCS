@@ -2,8 +2,8 @@
  * Models hurricane information, including categories.  
  * Works with HurricaneOrganizer, provides object and comparison skeletons.
  * 
- * @author Susan King
- * @version January 10, 2010
+ * @author Susan King, Akshay Manglik, Michelle Si
+ * @version February 27/ 2018
  */
 public class Hurricane
 {
@@ -12,6 +12,7 @@ public class Hurricane
     private int pressure;
     private int speed;
     private String name;
+    private int category;
 
     /**
      * Initializes a Hurricane object with no information.
@@ -37,6 +38,7 @@ public class Hurricane
         this.pressure = pressure;
         this.speed = speed;
         this.name = name;
+        this.category = determineCategory(speed);
     }
 
     /**

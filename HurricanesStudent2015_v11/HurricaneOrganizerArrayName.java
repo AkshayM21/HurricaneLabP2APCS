@@ -5,8 +5,8 @@ import java.util.*;
  * Models hurricane information, works with Hurricane class
  * and the user to manipulate an array of hurricane data. 
  *
- * @author Susan King 
- * @version December 28, 2015
+ * @author Susan King, Akshay Manglik, Michelle Si
+ * @version February 27, 2018
  */
 public class HurricaneOrganizerArrayName
 {
@@ -487,7 +487,7 @@ public class HurricaneOrganizerArrayName
         }
         while(j<hurricanes.length && hurricanes[j].getName().equals(name))
         {
-            al.add(hurricanes[j--]);
+            al.add(hurricanes[j++]);
         }
         return al.toArray(new Hurricane[al.size()]);
     }
