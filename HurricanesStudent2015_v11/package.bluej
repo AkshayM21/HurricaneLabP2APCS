@@ -2,12 +2,19 @@
 dependency1.from=HurricaneOrganizerArrayName
 dependency1.to=Hurricane
 dependency1.type=UsesDependency
+<<<<<<< HEAD
 objectbench.height=76
 objectbench.width=1260
 package.editor.height=639
 package.editor.width=1152
 package.editor.x=0
 package.editor.y=22
+=======
+package.editor.height=639
+package.editor.width=1152
+package.editor.x=6
+package.editor.y=113
+>>>>>>> 822430b0e15e784e9802e7f9c51fb0f002082170
 package.numDependencies=1
 package.numTargets=2
 package.showExtends=true
@@ -26,16 +33,26 @@ target1.typeParameters=
 target1.width=80
 target1.x=70
 target1.y=10
+<<<<<<< HEAD
 target2.editor.height=766
 target2.editor.width=1006
 target2.editor.x=274
 target2.editor.y=22
+=======
+target2.editor.height=1030
+target2.editor.width=1057
+target2.editor.x=213
+target2.editor.y=0
+>>>>>>> 822430b0e15e784e9802e7f9c51fb0f002082170
 target2.height=50
 target2.name=HurricaneOrganizerArrayName
 target2.naviview.expanded=true
 target2.showInterface=false
 target2.type=ClassTarget
+<<<<<<< HEAD
 target2.typeParameters=
+=======
+>>>>>>> 822430b0e15e784e9802e7f9c51fb0f002082170
 target2.width=210
 target2.x=70
 target2.y=70
